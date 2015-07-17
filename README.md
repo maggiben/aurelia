@@ -1,2 +1,0 @@
-# aurelia
-Aurelia Skeleton
