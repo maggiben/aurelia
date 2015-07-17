@@ -1,0 +1,88 @@
+type-ahead {
+  /*position: relative;*/
+}
+type-ahead .input-group {
+  position: relative;
+}
+type-ahead .input-group-icon {
+  position: absolute;
+  right: 0px;
+  padding: 5px;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.typeahead {
+  background-color: #fff;
+}
+.typeahead:focus {
+  border: 1px solid #0097cf;
+}
+.tt-hint {
+  color: #999
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion .name {
+  white-space: nowrap;
+  color: gray;
+  font-size: 0.75em;
+  display: inline-block;
+  width: 280px;  
+}
+.tt-suggestion .exchange {
+  white-space: nowrap;
+  color: lightgray;
+  font-size: 0.75em;
+  display: inline-block;
+  text-align: right;
+}
+
+.tt-suggestion .symbol {
+  white-space: nowrap;
+  display: inline-block;
+  width: 80px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.gist {
+  font-size: 14px;
+}
+.tt-menu {
+  white-space: nowrap;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}

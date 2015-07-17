@@ -15,8 +15,6 @@ export class Stock{
 
     // Create request
     var client = new HttpClient();
-    var client2 = new HttpClient();
-
     // Historical Data
     client.createRequest('v1/public/yql')
       .asGet()
@@ -32,21 +30,7 @@ export class Stock{
         this.logx(data.query.results.quote);
       });
 
-      console.log("getting quotes")
       this.heading = "STOCK"
-    // Quote
-    client2.createRequest('Api/v2/Quote/jsonp')
-      .asJsonp('callback')
-      .withBaseUrl('http://dev.markitondemand.com')
-      .withParams({
-        symbol: 'IBM'
-      })
-      //.withCallbackParameterName('callback')
-      .send()
-      .then(result => {        
-        console.log("tickerQuote result: ", result)          
-      });
-
   }
    
   logx(quote) {
@@ -135,10 +119,10 @@ export class Stock{
 
   activate(params, routeConfig, navigationInstruction){
     if(params.symbol) {
-      this.getQuote(params.symbol);
+      //this.getQuote(params.symbol);
       this.tickerQuote([params.symbol], '2015-03-01', '2015-07-16');
     } else {
-      this.getQuote('IBM');
+      //this.getQuote('IBM');
       this.tickerQuote(['IBM'], '2015-03-01', '2015-07-16');
     }
   }

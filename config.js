@@ -32,6 +32,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.12",
     "d3": "github:mbostock/d3@3.5.6",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "rx": "npm:rx@2.5.3",
     "typeahead": "github:twitter/typeahead.js@0.11.1",
     "github:aurelia/animator-css@0.13.0": {
       "aurelia-templating": "github:aurelia/templating@0.13.4"
@@ -261,6 +262,9 @@ System.config({
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:rx@2.5.3": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:source-map@0.1.43": {
       "amdefine": "npm:amdefine@0.1.1",
