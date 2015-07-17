@@ -1,5 +1,8 @@
+html, body {
+    height: 100%;
+}
 body {
-  margin: 0;
+    background-color: #1C1C1C;
 }
 
 .splash {
@@ -132,4 +135,36 @@ div.au-stagger {
   100% {
     opacity: 1;
   }
+}
+
+.autocomplete {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  margin-top: 4px;
+  width: 100%;
+  left: 0px;
+}
+
+.range {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #232323;
+}
+.range li {
+  padding: 10px;
+  display: inline-block;
+}
+
+.range li a {
+  text-decoration: none;
+  color: #8C8C8C;
+}
+
+.range li a:hover {
+  color: #fff;
 }

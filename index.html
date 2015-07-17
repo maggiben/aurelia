@@ -3,7 +3,8 @@
   <head>
     <title>Aurelia</title>
     <link rel="stylesheet" type="text/css" href="jspm_packages/npm/font-awesome@4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <!-- link rel="stylesheet" type="text/css" href="styles/styles.css" -->
+    <!-- link rel="stylesheet" type="text/css" href="styles/stock.css" -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body aurelia-app="animation-main">
@@ -11,10 +12,19 @@
       <div class="message">Aurelia Navigation Skeleton</div>
       <i class="fa fa-spinner fa-spin"></i>
     </div>
-
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
+      System.config({
+        "baseUrl": "app",
+        "baseViewUrl": "app",
+        "paths": {
+          //"*": "/dist/*.js",
+          "github:*": "/jspm_packages/github/*.js",
+          "npm:*": "/jspm_packages/npm/*.js",
+          "styles/*": "/styles/*"
+        }
+      });
       System.import('aurelia-bootstrapper');
     </script>
   </body>

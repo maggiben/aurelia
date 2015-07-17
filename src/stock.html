@@ -1,0 +1,45 @@
+<template>
+  <require from="./candlestick"></require>
+  <section class="au-animate">
+    <!-- img src="https://logo.clearbit.com/ibm.com" -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-xs-2">
+            <h1>${symbol}</h1>
+          </div>
+          <div class="col-xs-10">
+            <div class="row">
+              <div class="col-xs-12">
+                <h5 class="text-right">${name}</h1>
+              </div>
+              <div class="col-xs-12">
+                <h5 class="text-right">September 14</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="range">
+          <li><a href="#">1d</a></li>
+          <li><a href="#">3d</a></li>
+          <li><a href="#">5d</a></li>
+          <li><a href="#">10d</a></li>
+          <li><a href="#">1m</a></li>
+          <li><a href="#">3m</a></li>
+          <li><a href="#">1r</a></li>
+          <li><a href="#">3r</a></li>
+          <li><a href="#">5r</a></li>
+          <li><a href="#">10r</a></li>
+        </ul>
+        <candlestick data.bind="quote"></candlestick>
+      </div>
+    </div>
+    <button type="button" class="btn btn-default" click.trigger="tickerQuote(['IBM'], '2015-05-01', '2015-07-15')">Get</button>
+    <button type="button" class="btn btn-default" click.trigger="lookup('IBM')">Set</button>
+    <pre>${valorex}</pre>
+  </section>
+</template>

@@ -5,6 +5,7 @@ export class Welcome{
   firstName = 'John';
   lastName = 'Doe';
   previousValue = this.fullName;
+  id = null;
 
   //Getters can't be observed with Object.observe, so they must be dirty checked.
   //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
@@ -23,6 +24,10 @@ export class Welcome{
     if (this.fullName !== this.previousValue) {
       return confirm('Are you sure you want to leave?');
     }
+  }
+  activate(params, routeConfig, navigationInstruction) {
+    console.log(params, routeConfig, navigationInstruction);
+    this.id = params.id;
   }
 }
 
