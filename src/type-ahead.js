@@ -69,7 +69,7 @@ export class TypeAhead {
                 return e.target.value; // Project the text from the input
             })
             .filter(function (text) {
-                var regex = new RegExp("^[a-zA-Z0-9_]*$"); // Match only alphanumric strings
+                var regex = new RegExp("^[a-zA-Z0-9_ ]*$"); // Match only alphanumric underscore and space
                 return regex.test(text);
             })
             .debounce(550)
@@ -118,7 +118,7 @@ export class TypeAhead {
                     '</div>'
                 ].join('\n'),
                 suggestion: function(data) {
-                    return '<div><strong class="symbol">' + data.symbol + '</strong><span class="name">' + data.name + '</span><span class="exchange">' + data.exchange + '</span></div>';
+                    return `<div><strong class="symbol">${data.symbol}</strong><span class="name">${data.name}</span><span class="exchange">${data.exchange}</span></div>`;
                 }
             }
         });

@@ -40,6 +40,12 @@
     </div>
     <button type="button" class="btn btn-default" click.trigger="tickerQuote(['IBM'], '2015-05-01', '2015-07-15')">Get</button>
     <button type="button" class="btn btn-default" click.trigger="lookup('IBM')">Set</button>
-    <pre>${valorex}</pre>
+    <div class="page-header">
+      <h3>In the news <small>IBM</small></h3>
+    </div>
+    <ul>
+      <li repeat.for="item of news"><span class="news-date">${item.pubDate}</span> <a href="${item.link}">${item.title}</a></li>
+    </ul>
+
   </section>
 </template>
