@@ -33,6 +33,7 @@ System.config({
     "d3": "github:mbostock/d3@3.5.6",
     "font-awesome": "npm:font-awesome@4.3.0",
     "rx": "npm:rx@2.5.3",
+    "select2": "github:select2/select2@4.0.0",
     "typeahead": "github:twitter/typeahead.js@0.11.1",
     "github:aurelia/animator-css@0.13.0": {
       "aurelia-templating": "github:aurelia/templating@0.13.4"
