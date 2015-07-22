@@ -64,6 +64,7 @@
       "font-awesome": "npm:font-awesome@^4.3.0",
       "rx": "npm:rx@^2.5.3",
       "select2": "github:select2/select2@^4.0.0",
+      "semantic-ui": "github:Semantic-Org/Semantic-UI@^2.0.4",
       "typeahead": "github:twitter/typeahead.js@^0.11.1"
     },
     "devDependencies": {
@@ -74,6 +75,24 @@
     "overrides": {
       "npm:core-js@0.9.18": {
         "main": "client/shim.min"
+      },
+      "github:Semantic-Org/Semantic-UI@2.0.4": {
+        "directories": {
+          "lib": "dist"
+        },
+        "main": "semantic",
+        "shim": {
+          "semantic": {
+            "deps": [
+              "jquery",
+              "semantic-ui/semantic.css!"
+            ]
+          }
+        },
+        "dependencies": {
+          "jquery": "github:components/jquery",
+          "css": "github:systemjs/plugin-css"
+        }
       }
     }
   }

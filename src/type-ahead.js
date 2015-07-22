@@ -2,7 +2,7 @@ import {inject, customElement, bindable} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 import typeahead from 'typeahead';
 import Rx from 'rx';
-import 'styles/type-ahead.css!'
+//import 'styles/type-ahead.css!'
 
 
 @inject(Element, HttpClient)
@@ -97,7 +97,6 @@ export class TypeAhead {
         console.log("valueChanged: ", newValue);
     }
     attached() {
-
         this.typeAhead = $(this.element).find('input').typeahead({
             hint: true,
             async: true,

@@ -1,6 +1,9 @@
-import 'bootstrap';
-import 'bootstrap/css/bootstrap.css!';
-import 'styles/styles.css!'
+//import 'bootstrap';
+//import 'bootstrap/css/bootstrap.css!';
+
+import 'semantic-ui';
+//import 'semantic-ui/semantic.css!';
+//import 'styles/styles.css!'
 
 export class App {
   configureRouter(config, router){

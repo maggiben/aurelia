@@ -2,27 +2,27 @@
   <require from="./candlestick"></require>
   <section class="au-animate">
     <!-- img src="https://logo.clearbit.com/ibm.com" -->
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-xs-2">
+    <div class="ui grid">
+      <div class="sixteen wide column">
+        <div class="ui grid">
+          <div class="four wide column">
             <h1>${symbol}</h1>
           </div>
-          <div class="col-xs-10">
-            <div class="row">
-              <div class="col-xs-12">
-                <h5 class="text-right">${name}</h1>
+          <div class="twelve wide colum">
+            <div class="ui statistic">
+              <div class="value">
+                5,550
               </div>
-              <div class="col-xs-12">
-                <h5 class="text-right">September 14</h1>
+              <div class="label">
+                Downloads
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
+    <div class="ui grid">
+      <div class="sixteen wide column">
         <ul class="range">
           <li><a href="#">1d</a></li>
           <li><a href="#">3d</a></li>
@@ -38,14 +38,27 @@
         <candlestick data.bind="quote"></candlestick>
       </div>
     </div>
-    <button type="button" class="btn btn-default" click.trigger="tickerQuote(['IBM'], '2015-05-01', '2015-07-15')">Get</button>
-    <button type="button" class="btn btn-default" click.trigger="lookup('IBM')">Set</button>
+    <button type="button" class="ui primary button" click.trigger="tickerQuote(['IBM'], '2015-05-01', '2015-07-15')">Get</button>
+    <button type="button" class="ui primary button" click.trigger="lookup('IBM')">Set</button>
     <div class="page-header">
       <h3>In the news <small>IBM</small></h3>
     </div>
     <ul>
       <li repeat.for="item of news"><span class="news-date">${item.pubDate}</span> <a href="${item.link}">${item.title}</a></li>
     </ul>
+
+    <table class="ui striped table">
+      <tbody>
+        <tr repeat.for="cluster of clusters">
+          <td>${cluster.name}</td>
+          <td><a class="ui label ${cluster.color}">${cluster.count}</a></td>
+          <td data-title="Matt" data-content="Matt has been a member since July 2014">${cluster.a}</td>
+          <td>${cluster.b}</td>
+          <td>${cluster.c}</td>
+          <td>${cluster.d}</td>
+          <td>${cluster.e}</td>
+      </tbody>
+    </table>
 
   </section>
 </template>

@@ -1,9 +1,35 @@
 <template>
   <require from='./nav-bar'></require>
 
-  <nav-bar router.bind="router"></nav-bar>
+  <div class="ui left demo vertical inverted labeled icon sidebar menu">
+    <a class="item"><i class="home icon"></i>Home</a>
+    <a class="item"><i class="block layout icon"></i>Topics</a>
+    <a class="item"><i class="smile icon"></i>Friends</a>
+  </div>
+  
+  <div class="pusher">
+    <section class="ui vertical inverted sticky">
+      <div class="item">
+        <a class="ui logo icon image" href="http://semantic-ui.com/">
+          <img src="./semantic_files/logo.png">
+        </a>
+        <a href="http://semantic-ui.com/"><b>UI Docs</b></a>
+      </div>
+    </section>
+    <article class="article">
+      <nav-bar router.bind="router"></nav-bar>
+      <router-view></router-view>
+    </article>
+  </div>
 
+  <div class="ui left demo vertical inverted labeled icon sidebar menu">
+    <a class="item"><i class="home icon"></i>Home</a>
+    <a class="item"><i class="block layout icon"></i>Topics</a>
+    <a class="item"><i class="smile icon"></i>Friends</a>
+  </div>
+  <!-- nav-bar router.bind="router"></nav-bar>
   <div class="page-host">
     <router-view></router-view>
-  </div>
+  </div -->
+    
 </template>

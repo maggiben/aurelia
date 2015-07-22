@@ -1,9 +1,23 @@
 <template>
-  <div class="input-group">
+  <!-- div class="ui search ${isSearching ? 'loading':''}">
+    <div class="ui right icon input">
+      <input class="prompt" type="text" placeholder="Search..." autocomplete="off">
+      <i class="search link icon"></i>
+    </div>
+  </div -->
+  <div class="ui icon input">
+    <input type="text" placeholder="Search...">
+    <i class="search link icon"></i>
+  </div>
+  <!-- div class="ui left icon input">
+    <input class="prompt" type="text" placeholder="Search GitHub">
+    <i class="github icon"></i>
+  </div -->
+  <!-- div class="input-group">
     <input type="text" class="typeahead" placeholder="Search" name="srch-term" id="srch-term" value.bind="value">
     <span class="input-group-icon">
       <i class="fa fa-circle-o-notch fa-spin" if.bind="isSearching"></i>
       <i class="fa fa-search" if.bind="!isSearching"></i>
     </span>
-  </div>
+  </div -->
 </template>

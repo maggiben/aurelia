@@ -164,6 +164,40 @@ export class Stock{
     this.eventAggregator = eventAggregator;
   }
 
+  testSpeed() {
+    var colors = ['red', 'orange', 'yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black']
+    this.clusters = new Array(200);
+    for(let i = 0; i < this.clusters.length; i++) {
+      this.clusters[i] = {
+        name: `cluser${i}`,
+        count: Math.floor(Math.random() * 10),
+        color: colors[Math.floor(Math.random()*colors.length)],
+        a: (Math.random() * 100).toFixed(2),
+        b: (Math.random() * 100).toFixed(2),
+        c: (Math.random() * 100).toFixed(2),
+        d: (Math.random() * 100).toFixed(2),
+        e: (Math.random() * 100).toFixed(2)
+      }
+    }
+    var clusters = this.clusters;
+    function loop() {
+      clusters.forEach((d, i) => {
+          clusters[i] = {
+          name: `cluser${i}`,
+          count: Math.floor(Math.random() * 10),
+          color: colors[Math.floor(Math.random()*colors.length)],
+          a: (Math.random() * 100).toFixed(2),
+          b: (Math.random() * 100).toFixed(2),
+          c: (Math.random() * 100).toFixed(2),
+          d: (Math.random() * 100).toFixed(2),
+          e: (Math.random() * 100).toFixed(2)
+        }
+      })
+      //requestAnimationFrame(loop);
+    }
+    loop()
+  }
+
   activate(params, routeConfig, navigationInstruction){
     if(params.symbol) {
       //this.getQuote(params.symbol);
@@ -171,9 +205,10 @@ export class Stock{
     } else {
       //this.getQuote('IBM');
       this.tickerQuote(['IBM'], '2015-03-01', '2015-07-16');
-      this.getDividendHistory(['IBM'], '2015-03-01', '2015-07-16')
+      //this.getDividendHistory(['IBM'], '2015-03-01', '2015-07-16')
       this.getFeeds('IBM');
     }
+    this.testSpeed();
   }
 }
 

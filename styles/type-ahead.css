@@ -1,25 +1,10 @@
-type-ahead {
-  /*position: relative;*/
-}
-type-ahead .input-group {
-  position: relative;
-}
-type-ahead .input-group-icon {
-  position: absolute;
-  right: 0px;
-  padding: 5px;
-}
-
 .typeahead,
 .tt-query,
 .tt-hint {
-  height: 30px;
-  padding: 8px 12px;
-  font-size: 14px;
-  line-height: 30px;
   border: 1px solid #ccc;
   outline: none;
 }
+
 .typeahead {
   background-color: #fff;
 }
@@ -31,9 +16,18 @@ type-ahead .input-group-icon {
 }
 
 .tt-suggestion {
-  padding: 3px 20px;
+  padding: 6px 20px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.33;
+  border-bottom: 1px solid rgba(34,36,38,.1);
+}
+
+.tt-suggestion:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.tt-suggestion:last-child {
+  border-radius: 0 0 4px 4px;
 }
 
 .tt-suggestion .name {
@@ -41,7 +35,8 @@ type-ahead .input-group-icon {
   color: gray;
   font-size: 0.75em;
   display: inline-block;
-  width: 280px;  
+  width: 280px;
+  text-align: right;
 }
 .tt-suggestion .exchange {
   white-space: nowrap;
@@ -60,12 +55,16 @@ type-ahead .input-group-icon {
 .tt-suggestion:hover {
   cursor: pointer;
   color: #fff;
-  background-color: #0097cf;
+  background-color: #0161D2;
+}
+
+.tt-suggestion:hover span {
+  color: #fff;
 }
 
 .tt-suggestion.tt-cursor {
   color: #fff;
-  background-color: #0097cf;
+  background-color: #0161D2;
 
 }
 
@@ -79,10 +78,18 @@ type-ahead .input-group-icon {
 .tt-menu {
   white-space: nowrap;
   margin: 12px 0;
-  padding: 8px 0;
+  /* padding: 8px 0; */
+  right: 0px !important;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0px;
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+}
+
+.results {
+  margin: 12px 0;
+  right: 0px !important;
+  left: -100% !important;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
 }

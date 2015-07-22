@@ -3,24 +3,25 @@
   <head>
     <title>Aurelia</title>
     <link rel="stylesheet" type="text/css" href="jspm_packages/npm/font-awesome@4.3.0/css/font-awesome.min.css">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
-    <!-- link rel="stylesheet" type="text/css" href="styles/styles.css" -->
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github/Semantic-Org/Semantic-UI@2.0.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <!-- link rel="stylesheet" type="text/css" href="styles/stock.css" -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body aurelia-app="animation-main">
+  <body id="main" aurelia-app="animation-main" class="minimal pushable" ontouchstart="">
     <div class="splash">
       <div class="message">Aurelia Navigation Skeleton</div>
       <i class="fa fa-spinner fa-spin"></i>
     </div>
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
+    <!-- script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.1/semantic.min.js"></script -->
+    <script type="text/javascript" src="jspm_packages/system.js"></script>
+    <script type="text/javascript" src="config.js"></script>
     <script>
       System.config({
-        "baseUrl": "app",
-        "baseViewUrl": "app",
+        //"baseUrl": "app",
+        //"baseViewUrl": "app",
         "paths": {
-          //"*": "/dist/*.js",
+          "*": "/dist/*.js",
           "github:*": "/jspm_packages/github/*.js",
           "npm:*": "/jspm_packages/npm/*.js",
           "styles/*": "/styles/*"
